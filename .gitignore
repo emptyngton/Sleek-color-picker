@@ -1,0 +1,29 @@
+## Node/Electron
+node_modules/
+dist/
+out/
+release/
+coverage/
+.cache/
+
+## Logs
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+## OS/Editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+
+## Env files
+.env
+.env.*
+
+## Build resources cache
+*.asar
+
+

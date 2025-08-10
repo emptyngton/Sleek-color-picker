@@ -1,0 +1,48 @@
+{
+  "name": "color-picker",
+  "version": "1.0.0",
+  "description": "Sleek Electron color picker for Windows with on-screen eyedropper and HSV palette.",
+  "author": "",
+  "license": "MIT",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "keywords": [
+    "electron",
+    "color",
+    "picker",
+    "eyedropper"
+  ],
+  "devDependencies": {
+    "electron": "^37.2.6",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.example.colorpicker",
+    "productName": "Sleek Color Picker",
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "asar": true,
+    "directories": {
+      "buildResources": "build"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64", "ia32"]
+        }
+      ],
+      "icon": "src/assets/color-picker-logo.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "perMachine": false
+    }
+  }
+}

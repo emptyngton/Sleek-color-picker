@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Eyedropper</title>
+    <style>
+      html, body { margin:0; height:100%; overflow:hidden; }
+      body { background: rgba(0,0,0,0.001); cursor: none; }
+      #hud { position: fixed; top: 12px; left: 12px; padding: 8px 10px; border-radius: 8px; background: rgba(20,20,20,0.9); color: #fff; font-family: ui-sans-serif, system-ui, Segoe UI, Roboto, Arial; border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 6px 16px rgba(0,0,0,0.4); }
+      #swatch { width: 18px; height: 18px; border-radius: 4px; display: inline-block; vertical-align: middle; margin-right: 8px; border: 1px solid rgba(255,255,255,0.4); }
+      #mag { position: fixed; pointer-events: none; width: 120px; height: 120px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); overflow: hidden; box-shadow: 0 6px 16px rgba(0,0,0,0.5); backdrop-filter: none;}
+      #mag canvas { width: 100%; height: 100%; image-rendering: pixelated; }
+      #video { display:none; }
+      #screen { display:none; }
+      #reticle { position: fixed; pointer-events: none; width: 18px; height: 18px; transform: translate(-50%, -50%); }
+      #reticle::before, #reticle::after { content: ""; position: absolute; background: rgba(255,255,255,0.9); }
+      #reticle::before { left: 50%; top: 0; width: 1px; height: 100%; transform: translateX(-50%); }
+      #reticle::after { top: 50%; left: 0; height: 1px; width: 100%; transform: translateY(-50%); }
+    </style>
+  </head>
+  <body>
+    <div id="hud"><span id="swatch"></span><span id="hex">#ffffff</span> · Click to select · Esc to cancel</div>
+    <div id="mag"><canvas id="zoom"></canvas></div>
+    <div id="reticle"></div>
+    <video id="video" autoplay muted></video>
+    <canvas id="screen"></canvas>
+    <script src="index.js"></script>
+  </body>
+  </html>
+
