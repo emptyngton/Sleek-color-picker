@@ -1,5 +1,7 @@
 # Sleek Color Picker
 
+![Sleek Color Picker screenshot](docs/screenshot.png)
+
 Sleek, fast, and privacy-friendly Electron color picker for Windows. Pick colors from anywhere on your screens, refine via an HSV palette, and copy hex instantly.
 
 ## Features
