@@ -30,6 +30,17 @@ npm run dist
 
 The Windows installer will be generated under `dist/`.
 
+## Releases
+
+Create a version tag to trigger a GitHub Actions build and upload assets to the Release:
+
+```bash
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+The workflow builds the Windows installer and publishes to the tagged Release automatically.
+
 ## Usage
 
 - Click “Pick from screen” to activate the on-screen eyedropper

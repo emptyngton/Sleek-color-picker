@@ -19,6 +19,14 @@
     "electron": "^37.2.6",
     "electron-builder": "^26.0.12"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emptyngton/Sleek-color-picker.git"
+  },
+  "homepage": "https://github.com/emptyngton/Sleek-color-picker",
+  "bugs": {
+    "url": "https://github.com/emptyngton/Sleek-color-picker/issues"
+  },
   "build": {
     "appId": "com.example.colorpicker",
     "productName": "Sleek Color Picker",
@@ -43,6 +51,13 @@
       "oneClick": false,
       "allowToChangeInstallationDirectory": true,
       "perMachine": false
-    }
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "emptyngton",
+        "repo": "Sleek-color-picker"
+      }
+    ]
   }
 }
